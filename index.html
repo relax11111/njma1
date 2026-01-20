@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8473920180571259"
+     crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<title>مدونتك | Your Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root {
+    --main: #3a7d7c;
+    --light: #f2f7f7;
+    --dark: #2c3e50;
+    --card: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: var(--light);
+    color: var(--dark);
+    line-height: 1.8;
+}
+
+header {
+    background: linear-gradient(135deg, #3a7d7c, #5fb3b3);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav {
+    background: white;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--main);
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #000;
+}
+
+.lang-btn {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background: var(--main);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+.post {
+    background: var(--card);
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.07);
+}
+
+.post h2 {
+    color: var(--main);
+}
+
+footer {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.en {
+    display: none;
+    direction: ltr;
+}
+</style>
+</head><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8473920180571259"
+     crossorigin="anonymous"></script>
+
+<body>
+
+<button class="lang-btn" onclick="toggleLang()">English</button>
+
+<header>
+    <h1 class="ar">مدونتك</h1>
+    <h1 class="en">Your Blog</h1>
+    <p class="ar">مدونة لمشاركة المعرفة بأسلوب بسيط واحترافي</p>
+    <p class="en">A clean and professional blog to share knowledge</p>
+</header>
+
+<nav>
+    <a href="#" class="ar">الرئيسية</a>
+    <a href="#" class="ar">المقالات</a>
+    <a href="#" class="ar">من نحن</a>
+    <a href="#" class="ar">تواصل</a>
+
+    <a href="#" class="en">Home</a>
+    <a href="#" class="en">Articles</a>
+    <a href="#" class="en">About</a>
+    <a href="#" class="en">Contact</a>
+</nav>
+
+<div class="container">
+
+    <div class="post">
+        <h2 class="ar">مرحبًا بك</h2>
+        <h2 class="en">Welcome</h2>
+
+        <p class="ar">
+            هذه المدونة مصممة لعرض المعلومات والمقالات بطريقة مريحة للعين
+            وسهلة القراءة.
+        </p>
+
+        <p class="en">
+            This blog is designed to present articles and information in a clean,
+            easy-to-read layout.
+        </p>
+    </div>
+
+    <div class="post">
+        <h2 class="ar">مقالك الأول</h2>
+        <h2 class="en">Your First Article</h2>
+
+        <p class="ar">
+            يمكنك إضافة مقالاتك هنا، وتطوير المدونة مستقبلًا لتصبح منصة متكاملة.
+        </p>
+
+        <p class="en">
+            You can add your articles here and expand the blog into a full platform.
+        </p>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 - مدونتك | Your Blog
+</footer>
+
+<script>
+let isArabic = true;
+
+function toggleLang() {
+    const ar = document.querySelectorAll('.ar');
+    const en = document.querySelectorAll('.en');
+    const btn = document.querySelector('.lang-btn');
+
+    if (isArabic) {
+        ar.forEach(e => e.style.display = 'none');
+        en.forEach(e => e.style.display = 'block');
+        document.documentElement.lang = 'en';
+        btn.textContent = 'العربية';
+    } else {
+        ar.forEach(e => e.style.display = 'block');
+        en.forEach(e => e.style.display = 'none');
+        document.documentElement.lang = 'ar';
+        btn.textContent = 'English';
+    }
+    isArabic = !isArabic;
+}
+</script>
+
+</body>
+</html>
